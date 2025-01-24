@@ -46,12 +46,14 @@ const Weath = () => {
 
       <div className="flex flex-col fixed top-0 right-0 overflow-y-scroll w-full md:w-1/3 h-full py-5 bg-black bg-opacity-50 backdrop-blur-md border-l border-gray-600">
         <div className="flex items-center w-full px-5 md:px-10">
-          <input
-            type="text"
-            placeholder="Search City"
-            className="w-full py-2 bg-transparent border-b border-gray-600 text-white outline-none placeholder-gray-400"
-            onChange={(e) => setCity(e.target.value)}
-          />
+          <form onSubmit={() => getData()} className="w-full">
+            <input
+              type="text"
+              placeholder="Search City"
+              className="w-[100%] py-2 bg-transparent border-b border-gray-600 text-white outline-none placeholder-gray-400"
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </form>
           <FaMagnifyingGlass
             onClick={() => getData()}
             className="text-white text-xl ml-2 cursor-pointer"
